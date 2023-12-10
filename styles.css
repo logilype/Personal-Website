@@ -7,28 +7,35 @@ body {
     align-items: center;
     height: auto;
     margin: 0;
-}
-
-/* Create the align-center class */
-.align-center {
-    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 /* Styling for the main content of the page */
-main {
-    padding-top: 60px; /* or margin-top: 60px; */
+#content {
+    padding-top: 50px; /* Adjust the top padding to ensure content is below the navbar */
 }
 
-/* Your existing CSS code for the navbar and other elements */
 nav {
     background-color: #eeeeee;
     overflow: hidden;
     text-align: center;
     position: fixed;
     width: 100%;
+    height: 50px;
     top: 0;
     left: 0;
     box-sizing: border-box;
+    padding: 10px; /* Adjust padding for better styling */
+    display: flex;
+    justify-content: space-between; /* Keep Home and Wiki/Documentation in the middle */
+    align-items: center; /* Center the items vertically */
+    transition: background-color 0.5s; /* Added transition for background color */
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Center the links vertically */
 }
 
 nav a {
@@ -49,5 +56,50 @@ nav a:hover {
     width: 128px;
     display: block;
     margin: 0 auto;
-    margin-top: 70px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+nav.dark-mode {
+    background-color: #333;
+}
+
+nav.dark-mode a {
+    color: #fff;
+}
+
+nav.dark-mode a:hover {
+    background-color: #555;
+}
+
+/* Style for the dark mode toggle button */
+.dark-mode-toggle {
+    background-color: #eeeeee; /* Light background color */
+    color: #000000; /* Black text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s; /* Added transition for toggle button */
+}
+
+.dark-mode-toggle:hover {
+    background-color: #ddd; /* Darker background color on hover */
+}
+
+/* Adjust dark mode toggle for light mode */
+body.dark-mode .dark-mode-toggle {
+    background-color: #333; /* Dark background color in dark mode */
+    color: #ffffff; /* White text color in dark mode */
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #555; /* Lighter background color on hover in dark mode */
+}
+
+.align-center {
+    text-align: center;
 }

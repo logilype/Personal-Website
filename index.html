@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logilype's Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="dark-mode.js" defer></script>
 </head>
 <body>
     
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="https://wiki.logilype.xyz">Wiki/Documentation</a>
+        <div class="navbar-links">
+            <a href="../index.html">Home</a>
+            <a href="https://wiki.logilype.xyz">Wiki/Documentation</a>
+        </div>
+        
+        <!-- Dark mode toggle button -->
+        <button id="darkModeToggle" class="dark-mode-toggle">Toggle Dark/Light Mode</button>
     </nav>
 
     <div id="content">
-
+        <h1>Logilype's Website</h1>
         <img src="../channels4_profile.jpg" alt="Profile Picture" id="pfp">
-
         <p class="align-center">
             Hi! This is my "personal website"
         </p>
-
         <p class="align-center">
             This is still WIP (work in progress)
         </p>
-    
     </div>
     
 </body>
